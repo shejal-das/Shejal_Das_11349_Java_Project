@@ -10,14 +10,14 @@ class Food {
     }
 
     // Method to calculate and display the bill
-    void Bill(int price, int quantity) {
+    void Bill(String food, int price, int quantity) {
         int total = price * quantity;
 
         System.out.println("\n--------- ORDER SUMMARY ---------");
-        System.out.println("Food Name : " + price);
-        System.out.println("Price     : ₹" + price);
+        System.out.println("Food Name : " + food);
+        System.out.println("Price     : " + price);
         System.out.println("Quantity  : " + quantity);
-        System.out.println("Total Bill: ₹" + total);
+        System.out.println("Total Bill: " + total);
     }
 
     // Method to display delivery message
@@ -39,7 +39,7 @@ public class OnlineFoodDeliverySystem {
 
         // Welcome Screen
         System.out.println("****************************************");
-        System.out.println("      WELCOME TO FOODIE HUB");
+        System.out.println("         WELCOME TO FOODIE HUB");
         System.out.println("****************************************");
 
         // Login Section
@@ -128,7 +128,7 @@ public class OnlineFoodDeliverySystem {
 
             // Calling methods
             a.placeOrder(food);
-            a.Bill(price, quantity);
+            a.Bill(food, price, quantity);
             a.order();
 
             // Thank You Message
